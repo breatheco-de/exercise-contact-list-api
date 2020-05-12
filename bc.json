@@ -5,6 +5,7 @@
 	"solution": "https://github.com/breatheco-de/exercise-contact-list-api/tree/solution",
 	"preview": "https://github.com/breatheco-de/exercise-contact-list-api/blob/master/preview.jpg?raw=true",
 	"duration" : 16,
+	"translations": ["es", "us"],
 	"difficulty": "intermediate",
 	"description" : "Using the Flask o Django library in Python, create an API that supports: Creating, Updating, Reading and Deleting contacts.",
 	"technologies": ["python", "APIs", "REST", "Flask", "django"],
