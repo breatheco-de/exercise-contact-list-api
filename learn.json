@@ -9,5 +9,7 @@
 	"difficulty": "intermediate",
 	"description" : "Using the Flask o Django library in Python, create an API that supports: Creating, Updating, Reading and Deleting contacts.",
 	"technologies": ["python", "APIs", "REST", "Flask", "django"],
-	"talents": []
+	"talents": [],
+    "autoPlay": false,
+    "projectType": "project"
 }
