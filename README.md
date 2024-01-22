@@ -20,6 +20,7 @@ Create an API with the following endpoints:
 10. Delete a Group `DELETE /group/{group_id}`
 
 A contact must have the following data-structure on the database:
+
 ```python
 # Contact
     id: (int, primary_key)
@@ -38,7 +39,8 @@ A contact must have the following data-structure on the database:
 ## Formal API Documentation
 
 1. GET /contact/all
-```
+
+```bash
     REQUEST (application/json)
         type: GET
         body: null
@@ -55,8 +57,10 @@ A contact must have the following data-structure on the database:
             ...
         ]
 ```
+
 2. Create a new contact
-```
+
+```bash
     REQUEST (application/json)
         type: POST
         path: /contact
@@ -78,8 +82,10 @@ A contact must have the following data-structure on the database:
             "groups": [2,3]
         }
 ```
+
 3. Get a specific Contact
-```
+
+```bash
     REQUEST (application/json)
         type: GET
         path: /contact/{contact_id}
@@ -102,8 +108,10 @@ A contact must have the following data-structure on the database:
              ]
         }
 ```
+
 4. Update a given contact 
-```
+
+```bash
     REQUEST (application/json)
         type: PUT
         path: /contact/{contact_id}
@@ -125,8 +133,10 @@ A contact must have the following data-structure on the database:
             "groups": [2,3]
         }
 ```
+
 5. Delete a contact by id 
-```
+
+```bash
     REQUEST (application/json)
         type: DELETE
         path: /contact/{contact_id}
@@ -140,8 +150,10 @@ A contact must have the following data-structure on the database:
             }
         }
 ```
+
 6. List all Groups
-```
+
+```bash
     REQUEST (application/json)
         type: GET
         path: /group/
@@ -160,8 +172,10 @@ A contact must have the following data-structure on the database:
             ]
         }
 ```
+
 7. Get a specific Group
-```
+
+```bash
     REQUEST (application/json)
         type: GET
         path: /group/{group_id}
@@ -182,8 +196,10 @@ A contact must have the following data-structure on the database:
              ]
         }
 ```
+
 8. Update a given group's id 
-```
+
+```bash
     REQUEST (application/json)
         type: PUT
         path: /group/{group_id}
@@ -198,7 +214,8 @@ A contact must have the following data-structure on the database:
         }
 ```
 9. Delete a group by id 
-```
+
+```bash
     REQUEST (application/json)
         type: DELETE
         path: /group/{group_id}
