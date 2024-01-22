@@ -1,4 +1,4 @@
-# ![alt text](https://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=breathecode,32) Contact List REST API in Flask
+# Contact List REST API in Flask
 
 Creating and maintaining REST APIs is THE everyday job for most of back-end developers, so it is a skill that we need to mature. In this project we'll practice every step of the API development process.
 
