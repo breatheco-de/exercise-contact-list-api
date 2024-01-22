@@ -1,4 +1,4 @@
-# ![alt text](https://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=breathecode,32) Lista de Contacto con REST API en Flask
+# Lista de Contacto con REST API en Flask
 
 Crear y mantener las API REST es EL trabajo diario para la mayoría de los desarrolladores backend, por lo que es una habilidad que necesitamos para madurar. En este proyecto practicaremos cada paso del proceso de desarrollo de API.
 
