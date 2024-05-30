@@ -41,160 +41,160 @@ A contact must have the following data-structure on the database:
 1. GET /contact/all
 
 ```bash
-    REQUEST (application/json)
-        type: GET
-        body: null
-    RESPONSE (application/json)
-        code: 200 | 404 | 500
-        body: [
-            {
-                "full_name": "Dave Bradley",
-                "email": "dave@gmail.com",
-                "address":"47568 NW 34ST, 33434 FL, USA",
-                "phone":"7864445566",
-                "groups": [2,3]
-            },
-            ...
-        ]
+REQUEST (application/json)
+    type: GET
+    body: null
+RESPONSE (application/json)
+    code: 200 | 404 | 500
+    body: [
+        {
+            "full_name": "Dave Bradley",
+            "email": "dave@gmail.com",
+            "address":"47568 NW 34ST, 33434 FL, USA",
+            "phone":"7864445566",
+            "groups": [2,3]
+        },
+        ...
+    ]
 ```
 
 2. Create a new contact
 
 ```bash
-    REQUEST (application/json)
-        type: POST
-        path: /contact
-        body: {
-            "full_name": "Dave Bradley",
-            "email": "dave@gmail.com",
-            "address":"47568 NW 34ST, 33434 FL, USA",
-            "phone":"7864445566",
-            "groups": [2,3]
-        }
-    RESPONSE (application/json)
-        code: 200 | 400 | 500
-        body: {
-            "id": 12
-            "full_name": "Dave Bradley",
-            "email": "dave@gmail.com",
-            "address":"47568 NW 34ST, 33434 FL, USA",
-            "phone":"7864445566",
-            "groups": [2,3]
-        }
+REQUEST (application/json)
+    type: POST
+    path: /contact
+    body: {
+        "full_name": "Dave Bradley",
+        "email": "dave@gmail.com",
+        "address":"47568 NW 34ST, 33434 FL, USA",
+        "phone":"7864445566",
+        "groups": [2,3]
+    }
+RESPONSE (application/json)
+    code: 200 | 400 | 500
+    body: {
+        "id": 12
+        "full_name": "Dave Bradley",
+        "email": "dave@gmail.com",
+        "address":"47568 NW 34ST, 33434 FL, USA",
+        "phone":"7864445566",
+        "groups": [2,3]
+    }
 ```
 
 3. Get a specific Contact
 
 ```bash
-    REQUEST (application/json)
-        type: GET
-        path: /contact/{contact_id}
-    RESPONSE (application/json)
-        code: 200 | 404 | 400 | 500
-        body:{
-            "id": 12
-            "full_name": "Dave Bradley",
-            "email": "dave@gmail.com",
-            "address":"47568 NW 34ST, 33434 FL, USA",
-            "phone":"7864445566",
-            "groups": [
-                {
-                    "id": 2,
-                    "name": "Family"
-                },{
-                    "id": 3,
-                    "name": "Gamers"
-                }
-             ]
-        }
+REQUEST (application/json)
+    type: GET
+    path: /contact/{contact_id}
+RESPONSE (application/json)
+    code: 200 | 404 | 400 | 500
+    body:{
+        "id": 12
+        "full_name": "Dave Bradley",
+        "email": "dave@gmail.com",
+        "address":"47568 NW 34ST, 33434 FL, USA",
+        "phone":"7864445566",
+        "groups": [
+            {
+                "id": 2,
+                "name": "Family"
+            },{
+                "id": 3,
+                "name": "Gamers"
+            }
+         ]
+    }
 ```
 
 4. Update a given contact 
 
 ```bash
-    REQUEST (application/json)
-        type: PUT
-        path: /contact/{contact_id}
-        body: {
-            "full_name": "Dave Bradley",
-            "email": "dave@gmail.com",
-            "address":"47568 NW 34ST, 33434 FL, USA",
-            "phone":"7864445566",
-            "groups": [2,3]
-        }
-    RESPONSE (application/json)
-        code: 200 | 404 | 400 | 500
-        body:{
-            "id": 12
-            "full_name": "Dave Bradley",
-            "email": "dave@gmail.com",
-            "address":"47568 NW 34ST, 33434 FL, USA",
-            "phone":"7864445566",
-            "groups": [2,3]
-        }
+REQUEST (application/json)
+    type: PUT
+    path: /contact/{contact_id}
+    body: {
+        "full_name": "Dave Bradley",
+        "email": "dave@gmail.com",
+        "address":"47568 NW 34ST, 33434 FL, USA",
+        "phone":"7864445566",
+        "groups": [2,3]
+    }
+RESPONSE (application/json)
+    code: 200 | 404 | 400 | 500
+    body:{
+        "id": 12
+        "full_name": "Dave Bradley",
+        "email": "dave@gmail.com",
+        "address":"47568 NW 34ST, 33434 FL, USA",
+        "phone":"7864445566",
+        "groups": [2,3]
+    }
 ```
 
 5. Delete a contact by id 
 
 ```bash
-    REQUEST (application/json)
-        type: DELETE
-        path: /contact/{contact_id}
-        body: null
-    RESPONSE (application/json)
-        code: 200 | 404 | 500
-        body: {
-            "deleted": {
-                "id": 12,
-                "full_name": "Dave Bradley",
-            }
+REQUEST (application/json)
+    type: DELETE
+    path: /contact/{contact_id}
+    body: null
+RESPONSE (application/json)
+    code: 200 | 404 | 500
+    body: {
+        "deleted": {
+            "id": 12,
+            "full_name": "Dave Bradley",
         }
+    }
 ```
 
 6. List all Groups
 
 ```bash
-    REQUEST (application/json)
-        type: GET
-        path: /group/
-        body: null
-    RESPONSE (application/json)
-        code: 200 | 500
-        body: {
-            "data": [
-                {
-                    "id": 1,
-                    "name": "Work"
-                },{
-                    "id": 2,
-                    "name": "Gamers"
-                }
-            ]
-        }
+REQUEST (application/json)
+    type: GET
+    path: /group/
+    body: null
+RESPONSE (application/json)
+    code: 200 | 500
+    body: {
+        "data": [
+            {
+                "id": 1,
+                "name": "Work"
+            },{
+                "id": 2,
+                "name": "Gamers"
+            }
+        ]
+    }
 ```
 
 7. Get a specific Group
 
 ```bash
-    REQUEST (application/json)
-        type: GET
-        path: /group/{group_id}
-    RESPONSE (application/json)
-        code: 200 | 404 | 400 | 500
-        body:{
-            "id": 2
-            "name": "Work",
-            "contacts": [
-                {
-                    "id": 12
-                    "full_name": "Dave Bradley",
-                    "email": "dave@gmail.com",
-                    "address":"47568 NW 34ST, 33434 FL, USA",
-                    "phone":"7864445566",
-                    "groups": [2,3]
-                }
-             ]
-        }
+REQUEST (application/json)
+    type: GET
+    path: /group/{group_id}
+RESPONSE (application/json)
+    code: 200 | 404 | 400 | 500
+    body:{
+        "id": 2
+        "name": "Work",
+        "contacts": [
+            {
+                "id": 12
+                "full_name": "Dave Bradley",
+                "email": "dave@gmail.com",
+                "address":"47568 NW 34ST, 33434 FL, USA",
+                "phone":"7864445566",
+                "groups": [2,3]
+            }
+         ]
+    }
 ```
 
 8. Update a given group's id 
